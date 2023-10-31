@@ -1,0 +1,30 @@
+.ul-nav{
+  display: flex;
+  flex-direction: row;
+}
+.ul-nav li{
+  list-style: none;
+  margin: 1vh 2vw;
+}
+
+.Nav-Bar{
+ background-color: #0058ac;
+ width: 100%;
+}
+
+h6{
+  color:white;
+  margin: 1vh 2vh;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+a:hover{
+  color: black;
+}

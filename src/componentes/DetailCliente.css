@@ -1,0 +1,23 @@
+.contenedor-detalle{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-evenly;
+  color: white;
+  background-color: #0058ac;
+  padding: 4vh;
+  border: rgb(0, 0, 148)8 1px solid;
+  border-radius: 1vh;
+  width: 80%;
+  margin: 2vh auto;
+}
+
+.name-cliente{
+  width: 100%;
+  text-align: center;
+}
+
+h4{
+  margin: 2vh 6vh;
+}

@@ -1,0 +1,15 @@
+.h1-cards{
+ text-align: center;
+ background-color: #c4dafa;
+ width: 40%;
+ border-radius: 1vh;
+ margin: 1vh auto;
+ color: #005187;
+}
+.cards{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1vh;
+  flex-wrap: wrap;
+  
+}
