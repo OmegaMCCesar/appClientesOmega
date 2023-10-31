@@ -8,7 +8,6 @@
   height: 45vh;
   border-radius: 2vh;
   margin: 1vh;
-/*   background-color: rgb(160, 160, 228); */
 }
 
 .name{
@@ -39,4 +38,40 @@
 .fechahora{
   margin: 0.6vh auto;
   color: white;
+}
+
+@media screen and (max-width:500px){
+ .contenedor{
+   width: 95%;
+ }
+
+
+ .name{
+  margin: 0 auto;
+  font-size: 4vh;
+  font-weight: 100;
+ }
+
+ strong{
+  color: white;
+  font-size: 3vh;
+ }
+
+ .imgCard{
+  width: 20%;
+ }
+
+ .fechahora{
+  font-size: 3vh;
+ }
+
+ .status{
+  font-size: 3vh;
+ }
+
+ .btn-color{
+  color: white;
+  width: 10vh;
+  font-size: 3vh;
+ }
 }

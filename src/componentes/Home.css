@@ -7,3 +7,15 @@
 .imagen-flayer{
   width: 20%;
 }
+
+@media screen and (max-width:500px) {
+  .title-bienvenido{
+    font-size: 6vh;
+    text-align: center;
+    color:#0058ac ;
+  }
+
+  .imagen-flayer{
+    width: 85%;
+  }
+}

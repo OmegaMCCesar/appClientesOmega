@@ -21,3 +21,9 @@
 h4{
   margin: 2vh 6vh;
 }
+
+@media screen and (max-width:500px){
+  h4{
+    font-size: 3.5vh;
+  }
+}
