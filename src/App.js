@@ -13,7 +13,7 @@ function App() {
 
 const [clientes, setClientes] = useState([]);
 const [user, setUser] = useState({
-  nvl: true
+  nvl: false
 })
 
 const getClientes = () => axios.get('https://dbclientesomegamysql-production.up.railway.app')
