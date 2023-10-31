@@ -27,3 +27,22 @@ textarea{
   border-radius: 1vh;
   color: white;
 }
+
+@media screen and (max-width:600px) {
+  input, label, select, textarea{
+    width: 98%;
+    color: #0058ac;
+  }
+
+  label{
+    font-size: 3vh;
+  }
+  input,select,option{
+    font-size: 2vh;
+  }
+
+  .button-submit{
+    width: 98%;
+    font-size: 3vh;
+  }
+}
