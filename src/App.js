@@ -16,7 +16,7 @@ const [user, setUser] = useState({
   nvl: true
 })
 
-const getClientes = () => axios.get('http://localhost:3000/')
+const getClientes = () => axios.get('https://dbclientesomegamysql-production.up.railway.app')
 .then(res => {
   setClientes(res.data)
 })
@@ -27,7 +27,7 @@ useEffect(() => {
 
 const addCliente = (data)=>{
   
-  axios.post('http://localhost:3000/createCliente',data)
+  axios.post('https://dbclientesomegamysql-production.up.railway.app/createCliente',data)
   .then(function (response) {
     getClientes()
     console.log(response);
