@@ -1,0 +1,10 @@
+.btn_login{
+  border-radius: 1vh;
+  border: 1px solid white;
+  color: white;
+  width: 8vh;
+  margin: 2vh;
+  padding: 1vh;
+  font-size: 2vh;
+  background-color: #0058ac;
+}
