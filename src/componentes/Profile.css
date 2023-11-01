@@ -7,6 +7,7 @@
   border-radius: 1vh;
   background-color: #0058ac;
   color: white;
+  width: 80%;
 }
 
 .img-user_profile{
@@ -19,4 +20,28 @@
 .data_profile{
   text-align: center;
   width: 95%;
+}
+
+@media screen and (max-width:500px) {
+  
+  .contenedor_profile{
+    width: 98%;
+    border: 1px solid #f9f9f9;
+    border-radius: 1vh;
+    background-color: #0058ac;
+    color: white;
+  }
+  
+  .img-user_profile{
+   width: 8vh;
+   border: 1px solid white;
+   margin: 2vh;
+   border-radius: 50%;
+  }
+  
+  .data_profile{
+    text-align: center;
+    width: 95%;
+    font-size: 2vh;
+  }
 }

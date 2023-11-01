@@ -8,3 +8,15 @@
   font-size: 2vh;
   background-color: #0058ac;
 }
+
+.btn_login:hover{
+  cursor: pointer;
+  background-color: #3587d3;
+}
+
+@media screen and (max-width:500px){
+   .btn_login{
+    width: 95%;
+    font-size: 4vh;
+   }
+}

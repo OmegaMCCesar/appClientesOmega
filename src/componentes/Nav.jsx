@@ -8,13 +8,13 @@ const Nav = ({user,isAuthenticated}) => {
 
   return (
     <div className="Nav-Bar">
-     {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
     <ul className="ul-nav">
       <li><Link to='/'>Home</Link></li>
      {user.nvl === false ? <li><Link to='/clientes'>Clientes</Link></li> : null}
       <li><Link to='/form' >{user.nvl === true ? <>Solicitar Servico</> : <>Añadir Cliente</>}</Link></li>
-      {isAuthenticated === true ? <li><Link to={'/profile'}>Perfil</Link></li> : null} 
+      {isAuthenticated === true ? <li><Link to='/profile'>Perfil</Link></li> : null} 
     </ul>  
+    {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
     </div>
   )
 }
