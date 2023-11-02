@@ -14,7 +14,13 @@ const [valuesForm, setValuesForm] = useState({
   tecnico: '',
   observaciones: '',
   tallerOModulo: '',
-  fecha:''
+  fecha:'',
+  user: "user",
+  lastname: "undefined",
+  streets: "undefined",
+  email: "undefined",
+  equipo: "undefined",
+  referencias: "undefined",
 })
 
 const handleSubmit = (e) => {
@@ -31,7 +37,13 @@ const handleSubmit = (e) => {
     tecnico: '',
     observaciones: '',
     tallerOModulo: '',
-    fecha:''
+    fecha:'',
+    user: "user",
+    lastname: "undefined",
+    streets: "undefined",
+    email: "undefined",
+    equipo: "undefined",
+    referencias: "undefined",
   })
 }
 

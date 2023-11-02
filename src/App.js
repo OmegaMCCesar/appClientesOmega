@@ -30,7 +30,7 @@ useEffect(() => {
 
 const addCliente = (data)=>{
   console.log('datos para el post', data);
-  axios.post('https://dbclientesomegamysql-production.up.railway.app/createCliente',data)
+  axios.post('https://dbclientesomegamysql-production.up.railway.app/adminCreateCliente',data)
   .then(function (response) {
     getClientes()
     console.log(response);
