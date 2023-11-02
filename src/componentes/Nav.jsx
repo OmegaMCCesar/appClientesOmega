@@ -6,16 +6,30 @@ import LogoutButton from './LogoutButton';
 const Nav = ({user,isAuthenticated}) => {
 
 
+
+
+console.log(user);
+console.log('autenticacion',isAuthenticated)
   return (
-    <div className="Nav-Bar">
-    <ul className="ul-nav">
-      <li><Link to='/'>Home</Link></li>
-     {user.nvl === false ? <li><Link to='/clientes'>Clientes</Link></li> : null}
-      <li><Link to='/form' >{user.nvl === true ? <>Solicitar Servico</> : <>Añadir Cliente</>}</Link></li>
-      {isAuthenticated === true ? <li><Link to='/profile'>Perfil</Link></li> : null} 
-    </ul>  
-    {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
-    </div>
+     isAuthenticated ? (
+      <div className="Nav-Bar">
+      <ul className="ul-nav">
+        <li><Link to='/'>Home</Link></li>
+       {isAuthenticated === true && (user.email === "luiscesar.munoz.cervantes.upiit@gmail.com" || user.email=== "jesusfutwer3@gmail.com") ? <li><Link to='/clientes'>Clientes</Link></li> : null}
+        {isAuthenticated === true && (user.email === "luiscesar.munoz.cervantes.upiit@gmail.com" || user.email=== "jesusfutwer3@gmail.com") ? <li><Link to='/form' ><>Añadir Cliente</></Link></li> : null}
+        {isAuthenticated === true ? <li><Link to='/profile'>Perfil</Link></li> : null} 
+        {user.email === "luiscesar.munoz.cervantes.upiit@gmail.com" || user.email  === "jesusfutwer3@gmail.com" ? null : <li><Link to='/formVisita'>Agendar visita</Link></li>}
+      </ul>  
+      {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
+      </div>
+     ) : (
+      <div className="Nav-Bar">
+      <ul className="ul-nav">
+        <li><Link to='/'>Home</Link></li>
+      </ul>  
+      {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
+      </div>
+     )
   )
 }
 

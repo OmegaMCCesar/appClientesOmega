@@ -9,15 +9,13 @@ import Home from './componentes/Home';
 import Form from './componentes/Form';
 import DetailCliente from './componentes/DetailCliente';
 import Profile from './componentes/Profile';
+import FormCliente from './componentes/FormCliente';
 
 
 function App() {
 
 const [clientes, setClientes] = useState([]);
 const {user, isAuthenticated} = useAuth0()
-const [userr, setUserr] = useState({
-  nvl: false
-})
 
 const getClientes = () => axios.get('https://dbclientesomegamysql-production.up.railway.app')
 .then(res => {
@@ -43,14 +41,15 @@ const addCliente = (data)=>{
   return (
     <div className="App">
       <header>
-        <Nav user={userr} setUserr={setUserr} isAuthenticated={isAuthenticated}/>
+        <Nav user={user} isAuthenticated={isAuthenticated}/>
       </header>
      <Routes>
         <Route path='/' element={<Home />}/> 
-        <Route path='/clientes'  element={<Cards clientes={clientes} />}/>
+        <Route path='/clientes'  element={<Cards clientes={clientes} user={user} isAuthenticated={isAuthenticated} />}/>
         <Route path='/form' element={<Form addCliente={addCliente} />} />
         <Route path='/cliente/:id' element={<DetailCliente clientes={clientes} />}/>
         <Route path='/profile' element={<Profile user={user} isAuthenticated={isAuthenticated} />}/>
+        <Route path='/formVisita' element={<FormCliente  addCliente={addCliente} user={user} isAuthenticated={isAuthenticated}/>}/> 
     </Routes>
     </div>
   );
