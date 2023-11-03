@@ -5,11 +5,6 @@ import LogoutButton from './LogoutButton';
 
 const Nav = ({user,isAuthenticated}) => {
 
-
-
-
-console.log(user);
-console.log('autenticacion',isAuthenticated)
   return (
      isAuthenticated ? (
       <div className="Nav-Bar">
@@ -26,8 +21,9 @@ console.log('autenticacion',isAuthenticated)
       <div className="Nav-Bar">
       <ul className="ul-nav">
         <li><Link to='/'>Home</Link></li>
-      </ul>  
+      </ul>
       {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
+      {isAuthenticated === false && <h3>Ingresa para agendar un servicio</h3> }
       </div>
      )
   )

@@ -8,7 +8,30 @@
   width: 20%;
 }
 
+.omegalogo{
+  width: 10vh;
+  height: 10vh;
+}
+
+.posteromega{
+  width: 98%;
+}
+
+.contenedor_logo_bienvenida{
+  display: flex;
+  margin: 1vh auto;
+  color: #0058ac;
+  border: #0058ac 1px solid;
+  border-radius: 1vh;
+}
+
 @media screen and (max-width:500px) {
+
+
+  .posteromega{
+    margin-top: 1vh;
+  }
+
   .title-bienvenido{
     font-size: 6vh;
     text-align: center;
@@ -17,5 +40,10 @@
 
   .imagen-flayer{
     width: 85%;
+  }
+
+  .contenedor_logo_bienvenida{
+    flex-direction: column;
+    align-items: center;
   }
 }
