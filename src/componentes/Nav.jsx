@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import './Nav.css'
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
+import instagram from '../images/instagram.png'
+import facebook from '../images/facebook.png'
 
 const Nav = ({user,isAuthenticated}) => {
 
@@ -16,6 +18,8 @@ const Nav = ({user,isAuthenticated}) => {
         {user.email === "luiscesar.munoz.cervantes.upiit@gmail.com" || user.email  === "jesusfutwer3@gmail.com" ? null : <li><Link to='/formVisita'>Agendar visita</Link></li>}
       </ul>  
       {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
+      <a className='a_redes' target='_blanck' href='https://instagram.com/omegamc.1?igshid=MzMyNGUyNmU2YQ=='><img src={instagram} alt='instagram' className='icons_nav'/></a>
+      <a className='a_redes' target='_blanck' href='https://www.facebook.com/profile.php?id=61552902452992'><img src={facebook} alt='facebook' className='icons_nav'/></a>
       </div>
      ) : (
       <div className="Nav-Bar">
@@ -24,6 +28,8 @@ const Nav = ({user,isAuthenticated}) => {
       </ul>
       {isAuthenticated === true ? <LogoutButton/> : <LoginButton/>  }
       {isAuthenticated === false && <h3>Ingresa para agendar un servicio</h3> }
+      <a className='a_redes' target='_blanck' href='https://instagram.com/omegamc.1?igshid=MzMyNGUyNmU2YQ=='><img src={instagram} alt='instagram' className='icons_nav'/></a>
+      <a className='a_redes' target='_blanck' href='https://www.facebook.com/profile.php?id=61552902452992'><img src={facebook} alt='facebook' className='icons_nav'/></a>
       </div>
      )
   )
