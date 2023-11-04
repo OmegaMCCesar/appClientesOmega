@@ -47,8 +47,13 @@ a:hover{
 
 @media screen and (max-width:500px){
   .Nav-Bar{
-    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 0 auto;
+  }
+
+  .a_redes{
+    width: 20%;
   }
 
   .ul-nav {
@@ -63,5 +68,9 @@ a:hover{
  color: white;
  width: 45%;
  margin: 0.5vh 0 0.5vh 0;
+}
+
+h3{
+  margin: 0 auto;
 }
 }

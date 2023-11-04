@@ -3,7 +3,7 @@ import './Nav.css'
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import instagram from '../images/instagram.png'
-import facebook from '../images/facebook.png'
+import facebook from '../images/Facebook_Square_icon-icons.com_49948.png'
 
 const Nav = ({user,isAuthenticated}) => {
 
