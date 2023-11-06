@@ -89,7 +89,7 @@ const handleForm = (e) => {
           <option>Sabado</option>
          </select>
 
-         <label>horarioVisita</label>
+         <label>horarioVisita:</label>
          <select onChange={(e) => handleForm(e)} value={valuesForm.horarioVisita} name="horarioVisita" >
           <option>Horario</option>  
           <option>09hrs a 11hrs</option>
@@ -99,14 +99,14 @@ const handleForm = (e) => {
           <option>17hrs a 19hrs</option>
          </select>
 
-         <label>Tecnico</label>
+         <label>Tecnico:</label>
           <select onChange={(e) => handleForm(e)} value={valuesForm.tecnico} name="tecnico">
             <option>Tecnico</option>
             <option>Cesar</option>
             <option>Jesus</option>
          </select> 
 
-         <label>Observaciones</label>
+         <label>Observaciones:</label>
          <textarea  rows='8' onChange={(e) => handleForm(e)} value={valuesForm.observaciones} name="observaciones" />
 
          <label >Taller O Modulo:</label> 

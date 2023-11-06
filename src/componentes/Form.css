@@ -52,4 +52,10 @@ textarea{
     width: 98%;
     font-size: 3vh;
   }
+
+  form{
+    width: 50%;
+    border-bottom-left-radius:15%;
+    border-bottom-right-radius : 15%;
+  }
 }

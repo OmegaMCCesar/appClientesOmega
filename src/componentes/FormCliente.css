@@ -45,7 +45,7 @@ textarea{
 @media screen and (max-width:600px) {
   input, label, select, textarea{
     width: 98%;
-    color: #0058ac;
+    color: white;
   }
 
   label{
@@ -58,5 +58,11 @@ textarea{
   .button-submit{
     width: 98%;
     font-size: 3vh;
+  }
+
+  form{
+    width: 50%;
+    border-bottom-left-radius:15%;
+    border-bottom-right-radius : 15%;
   }
 }
