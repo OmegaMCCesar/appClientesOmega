@@ -18,12 +18,20 @@ form{
   border-bottom-right-radius : 35%;
 }
 
-input,label, select{
+input, select{
   width: 50%;
   margin: 1vh auto;
   border: #0058ac;
   border-radius: 1vh;
-  color: white;
+  color: #0058ac;
+}
+
+label{
+  width: 50%;
+  margin: 1vh auto;
+  border: #0058ac;
+  border-radius: 1vh;
+  color:white;
 }
 
 textarea{
@@ -40,6 +48,15 @@ textarea{
   background-color:  rgb(160, 160, 228);
   border-radius: 1vh;
   color: white;
+}
+
+.error{
+  color: red;  
+  background-color: yellow;
+  text-align: center;
+  padding: 0.5vh;
+  border-radius: 1vh;
+  font-weight: 400;
 }
 
 @media screen and (max-width:600px) {

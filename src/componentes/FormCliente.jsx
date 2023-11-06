@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './FormCliente.css'
+import comprovacionForm from "../middlewares/comprovacion"
 
 
 const FormCliente = ({addCliente, user, isAuthenticated}) => {
@@ -12,6 +13,26 @@ if(isAuthenticated){
 
 
 const [valuesForm, setValuesForm] = useState({
+  name : '',
+  address: '',
+  number: '',
+  typeOS: '1',
+  prediagnostico: 'undefined',
+  refacciones: 'undefined',
+  horarioVisita:'',
+  tecnico: 'undefined',
+  observaciones: '',
+  tallerOModulo: 'online',
+  fecha:'',
+  user: "user",
+  lastname: "",
+  streets: "",
+  email: emailUser,
+  equipo: "",
+  referencias: "",
+})
+
+const [errors, setErrors] = useState({
   name : '',
   address: '',
   number: '',
@@ -55,11 +76,14 @@ const handleSubmit = (e) => {
   })
 }
 
+
 const handleForm = (e) => {
   const nameInp = e.target.name
   const valueInp = e.target.value
+
+  setErrors(comprovacionForm({...valuesForm,[nameInp] : valueInp}))
+
   setValuesForm({...valuesForm,[nameInp] : valueInp})
-  console.log(valuesForm)
 }
 
   return (
@@ -67,9 +91,12 @@ const handleForm = (e) => {
        <form  onSubmit={handleSubmit}>
          <label name='name'  >Nombre:</label>
          <input name="name" onChange={(e) => handleForm(e)}  value={valuesForm.name}/>
+         {errors.name ? <p  className="error">{errors.name}</p> : null}
+
 
          <label name='lastname' id='lastname' >Apellido:</label>
          <input name="lastname" onChange={(e) => handleForm(e)}  value={valuesForm.lastname}/>
+         {errors.lastname ? <p  className="error">{errors.lastname}</p> : null}
 
          <label>Numero Telefono o Whatsapp: </label>
          <input name="number" onChange={(e) => handleForm(e)} value={valuesForm.number}  />
