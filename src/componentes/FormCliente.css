@@ -1,3 +1,4 @@
+
 .contenedor_form{
   background-image: url('../images/electrodomesticos.jpg');
   background-repeat: no-repeat;
@@ -8,15 +9,21 @@
 form{
   display: flex;
   flex-direction: column;
-  width: 80%;
-  padding: 4vh;
-  margin: auto;
+  width: 40%;
+  padding: 6vh;
+  margin:1vh auto;
+  border: 1px solid #0058ac;
+  background-color: #0058ac;
+  border-bottom-left-radius:35%;
+  border-bottom-right-radius : 35%;
 }
 
 input,label, select{
   width: 50%;
   margin: 1vh auto;
+  border: #0058ac;
   border-radius: 1vh;
+  color: white;
 }
 
 textarea{

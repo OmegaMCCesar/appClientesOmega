@@ -55,7 +55,7 @@ const handleForm = (e) => {
 }
 
   return (
-    <div>
+    <div className="contenedor_form">
        <form  onSubmit={handleSubmit}>
          <label name='name' id='name' >Nombre:</label>
          <input name="name" onChange={(e) => handleForm(e)}  value={valuesForm.name}/>

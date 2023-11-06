@@ -1,5 +1,6 @@
 import { useState } from "react"
-import './Form.css'
+import './FormCliente.css'
+
 
 const FormCliente = ({addCliente, user, isAuthenticated}) => {
    
@@ -62,7 +63,7 @@ const handleForm = (e) => {
 }
 
   return (
-    <div>
+    <div className="contenedor_form">
        <form  onSubmit={handleSubmit}>
          <label name='name'  >Nombre:</label>
          <input name="name" onChange={(e) => handleForm(e)}  value={valuesForm.name}/>
