@@ -100,16 +100,19 @@ const handleForm = (e) => {
 
          <label>Numero Telefono o Whatsapp: </label>
          <input name="number" onChange={(e) => handleForm(e)} value={valuesForm.number}  />
+         {errors.number ? <p  className="error">{errors.number}</p> : null}
 
          <label>Calle:</label>
          <input name="address" onChange={(e) => handleForm(e)} value={valuesForm.address}/>
+         {errors.address ? <p  className="error">{errors.address}</p> : null}
 
          <label>Entre calles:</label>
          <input name="streets" onChange={(e) => handleForm(e)} value={valuesForm.streets}/>
+         {errors.streets ? <p  className="error">{errors.streets}</p> : null}
 
          <label>Referencias: </label>
          <textarea placeholder="Ejemplo: numero de pisos de la casa, color de puerta, color de la fachada, negocios, escuelas o referente cercano"  rows='8' onChange={(e) => handleForm(e)} value={valuesForm.referencias} name="referencias" />
-
+         {errors.referencias ? <p  className="error">{errors.referencias}</p> : null}
 
 
          <label>Fecha:</label>
@@ -122,6 +125,7 @@ const handleForm = (e) => {
           <option>Viernes</option>
           <option>Sabado</option>
          </select>
+         {errors.fecha ? <p  className="error">{errors.fecha}</p> : null}
 
          <label>horarioVisita:</label>
          <select onChange={(e) => handleForm(e)} value={valuesForm.horarioVisita} name="horarioVisita" >
@@ -129,6 +133,7 @@ const handleForm = (e) => {
           <option>09hrs a 14hrs</option>
           <option>14hrs a 19hrs</option>
          </select>
+         {errors.horarioVisita ? <p  className="error">{errors.horarioVisita}</p> : null}
 
          <label>Equipo:</label>
          <select onChange={(e) => handleForm(e)}  name="equipo" value={valuesForm.equipo}>
@@ -140,10 +145,13 @@ const handleForm = (e) => {
           <option>Lavasecadora</option>
           <option>Otros</option>
          </select>
+         {errors.equipo? <p  className="error">{errors.equipo}</p> : null}
 
 
          <label>Observaciones:</label>
          <textarea placeholder="Ejemplo: tira agua, golpetea, no enfria, no calienta, no enciende,etc"  rows='8' onChange={(e) => handleForm(e)} value={valuesForm.observaciones} name="observaciones" />
+         {errors.observaciones? <p  className="error">{errors.observaciones}</p> : null}
+
 
          <label>E-mail: {emailUser} </label> 
        

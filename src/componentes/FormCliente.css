@@ -9,13 +9,14 @@
 form{
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 40%;
   padding: 6vh;
   margin:1vh auto;
   border: 1px solid #0058ac;
   background-color: #0058ac;
-  border-bottom-left-radius:35%;
-  border-bottom-right-radius : 35%;
+  border-bottom-left-radius:25%;
+  border-bottom-right-radius : 25%;
 }
 
 input, select{
@@ -57,16 +58,19 @@ textarea{
   padding: 0.5vh;
   border-radius: 1vh;
   font-weight: 400;
+  width: 50%;
 }
 
 @media screen and (max-width:600px) {
-  input, label, select, textarea{
+  input,select, textarea{
     width: 98%;
-    color: white;
+    color: #0058ac;
   }
 
   label{
     font-size: 3vh;
+    width: 98%;
+    color: white;
   }
   input,select,option{
     font-size: 2vh;
@@ -82,4 +86,9 @@ textarea{
     border-bottom-left-radius:15%;
     border-bottom-right-radius : 15%;
   }
+
+  .error{
+    width: 80%;
+  }
+
 }
