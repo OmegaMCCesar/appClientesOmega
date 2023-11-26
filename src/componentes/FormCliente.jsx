@@ -86,6 +86,16 @@ const handleForm = (e) => {
   setValuesForm({...valuesForm,[nameInp] : valueInp})
 }
 
+const isEmpty = Object.values(valuesForm).some(x => (x === ''))
+
+
+
+if(isAuthenticated === false)return(
+<div className="contenedor_form">
+<h1>ingrese para agendar una visita</h1>
+</div>
+)
+
   return (
     <div className="contenedor_form">
        <form  onSubmit={handleSubmit}>
@@ -156,7 +166,7 @@ const handleForm = (e) => {
          <label>E-mail: {emailUser} </label> 
        
 
-         <button className={"button-submit"} disabled={valuesForm.name === ''} type="submit">Enviar</button>
+         <button className={"button-submit"} disabled={isEmpty} type="submit">Enviar</button>
        </form>
     </div>
   )
